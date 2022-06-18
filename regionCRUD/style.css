@@ -1,0 +1,316 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #fff;
+    /* width: 100%; */
+    max-width: 70%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 2em auto;
+}
+
+/* .table_info {
+    background-color: #e2e2e2;
+    text-align: right;
+    padding: 10px;
+    position: sticky;
+    left: 0;
+} */
+
+.table {
+    width: 100%;
+    background-color: #fff;
+    border-collapse: collapse;
+    /* display: none; */
+}
+
+.table tr:nth-child(2n) {
+    background-color: #f5f5f5;
+}
+
+.table tr:hover {
+    background-color: #ebebeb;
+}
+
+.table tr th {
+    color: #fff;
+    background-color: #2f2f2f;
+    padding: 15px;
+}
+
+.table tr td {
+    border: solid 1px #d8d8d8;
+    border-left: 0;
+    border-right: 0;
+    padding: .5em;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.list_act_container {
+    color: #8f8f8f;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 10px 10px 0;
+}
+
+.list_act_container a {
+    color: #fff;
+    display: flex;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    transition: background-color 225ms ease-out;
+    text-decoration: none;
+}
+
+.list_act_container p {
+    color: #fff;
+    margin: 3px 10px 0;
+}
+
+.act_container {
+    color: #8f8f8f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.act_container a {
+    color: #fff;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 225ms ease-out;
+}
+
+.edit {
+    background-color: #147eff;
+}
+
+.edit:hover {
+    background-color: #479aff;
+}
+
+.edit:active {
+    background-color: #0065e0;
+}
+
+.delete {
+    background-color: #d11800;
+}
+
+.delete:hover {
+    background-color: #ff2205;
+}
+
+.delete:active {
+    background-color: #9e1200;
+}
+
+.add {
+    background-color: #00d13f;
+}
+
+.add:hover {
+    background-color: #05ff58;
+}
+
+.add:active {
+    background-color: #009e28;
+}
+
+.back {
+    background-color: #868686;
+}
+
+.back:hover {
+    background-color: #9b9a9a;
+}
+
+.back:active {
+    background-color: #505050;
+}
+
+.edit_img {
+    background: url(img/edit.svg) no-repeat top left;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+.delete_img {
+    background: url(img/delete.svg) no-repeat top left;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+.add_img {
+    background: url(img/plus.svg) no-repeat top left;
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+}
+
+.pagination {
+    background-color: #8f8f8f;
+    width: 100%;
+    padding: 10px;
+
+}
+
+.pagination>a {
+    background-color: #8f8f8f;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.pagination>a:hover {
+    background-color: #a9a9a9;
+}
+
+.pagination>a:active {
+    background-color: #767676;
+}
+
+form {
+    margin: 10px 290px;
+    width: 400px;
+    padding: 25px;
+    background: #f1f1f1;
+    border: 1px solid #e5e5e5;
+}
+
+
+form div {
+    margin: 0 0 .5em;
+}
+
+
+form div label {
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 .5em;
+    color: #222;
+}
+
+form div input {
+    display: inline-block;
+    height: 29px;
+    margin: 0;
+    padding: 0 8px;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    box-sizing: border-box;
+    border-radius: 1px;
+    width: 100%;
+}
+
+form div input:hover {
+    border: 1px solid #b9b9b9;
+    border-top: 1px solid #a0a0a0;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+
+}
+
+form div input:focus {
+    outline: none;
+    border: 1px solid #4d90fe;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+form .checkbox_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin: 0 0 .5em;
+    color: #222;
+}
+
+form .checkbox_container label {
+    margin: 0.5em 0;
+    color: #222;
+    width: 80px;
+}
+
+form .checkbox_container input {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    cursor: pointer;
+    vertical-align: bottom;
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 1px;
+}
+
+form .checkbox_container input:hover {
+    border-color: #c6c6c6;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+form .button_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 1em 0 0;
+
+}
+
+.submit_button,
+.delete_button,
+.back_button {
+
+    width: 100px;
+    text-align: center;
+    font-size: 1em;
+    color: #fff;
+    height: 35px;
+    padding: 0 8px;
+    margin: 0 0 0 .5em;
+    border-radius: 5px;
+    border: 1px solid #dcdcdc;
+}
+
+.message {
+    margin: 10px 290px;
+    width: 400px;
+    text-align: center;
+
+}
+
+.message_success {
+    color: #009e28;
+}
+
+.message_error {
+    color: #9e1200;
+}
